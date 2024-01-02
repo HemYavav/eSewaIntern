@@ -1,6 +1,3 @@
-package np.com.esewa.intern;
-
-
 import java.util.Scanner;
 /**
  * System.out.println("\033[31mThis text is red.\033[0m");

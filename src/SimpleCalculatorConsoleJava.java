@@ -1,6 +1,3 @@
-package np.com.esewa.intern;
-
-
 import java.util.Scanner;
 
 
@@ -121,11 +118,14 @@ public class SimpleCalculatorConsoleJava {
     }
 
     public static void main(String[] args) {
-//        inputGateWay();
-
 
 //        to display calculator design
         displayCalculator();
+
+        inputGateWay();
+
+
+
 
     }
 
