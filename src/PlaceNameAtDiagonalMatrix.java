@@ -77,20 +77,20 @@ public class PlaceNameAtDiagonalMatrix {
         int[] len3 = inputRowsNoCharacter(nameLength);
 
         // Transpose operation =>>2nd times
-        char[][] transposedSec = new char[nameLength][nameLength];
+        char[][] transposeSec = new char[nameLength][nameLength];
         for (int i = 0; i < nameLength; i++) {
-            System.arraycopy(transposeSecMatrix[len3[i]], 0, transposedSec[i], 0, nameLength);
+            System.arraycopy(transposeSecMatrix[len3[i]], 0, transposeSec[i], 0, nameLength);
         }
 
         // Display transposed Matrix
         System.out.println(colorCYAN+bold+"\n*************Final Transposed Matrix*************"+reset);
-        displayMatrix(transposedSec);
+        displayMatrix(transposeSec);
 
 
         // Getting name from diagonal of Matrix
         StringBuilder diagonalName = new StringBuilder();
         for (int i = 0; i < nameLength; i++) {
-            diagonalName.append(transposedSec[i][i]);
+            diagonalName.append(transposeSec[i][i]);
         }
 
         // Given Name equals to Diagonal character concatenated  Name
