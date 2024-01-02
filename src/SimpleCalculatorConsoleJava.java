@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class SimpleCalculatorConsoleJava {
 
-    Scanner sc;
+
 
     public static int addition(int num1, int num2) {
         return num1 + num2;
@@ -21,7 +21,6 @@ public class SimpleCalculatorConsoleJava {
 
     public static float divide(int num1, int num2) {
         try {
-            float res = (float) num1 / num2;
             return ((float) num1 / num2);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -30,17 +29,10 @@ public class SimpleCalculatorConsoleJava {
 
     }
 
-    public static int modulus(int num1, int num2) {
-        return num1 % num2;
-    }
 
-    public static String increment(int num1, int num2) {
-        return "num1: " + num1++ + "num2: " + num2++;
-    }
 
-    public static String decrement(int num1, int num2) {
-        return "num1: " + num1-- + "num2: " + num2--;
-    }
+
+
 
     public static void exit() {
         System.exit(0);
@@ -68,8 +60,6 @@ public class SimpleCalculatorConsoleJava {
                     """);
 
             System.out.println("\u001B[0m"); // Reset color to default
-
-
             System.out.print("\u001B[32m");
             System.out.print("Enter First No.: ");
             num1 = sc.nextInt();
@@ -82,30 +72,12 @@ public class SimpleCalculatorConsoleJava {
             System.out.println("\u001B[0m");
 
             switch (choice) {
-
-                case 1:
-                    System.out.println("Addition: " + addition(num1, num2));
-                    break;
-
-                case 2:
-                    System.out.println("Subtract: " + subtract(num1, num2));
-                    break;
-
-                case 3:
-                    System.out.println("Multiply: " + multiply(num1, num2));
-                    break;
-
-                case 4:
-                    System.out.println("Divide: " + divide(num1, num2));
-                    break;
-
-                case 5:
-                    exit();
-                    break;
-                default:
-                    System.out.println("\033[31mWrong choice!!!\033[0m");
-
-
+                case 1 -> System.out.println("Addition: " + addition(num1, num2));
+                case 2 -> System.out.println("Subtract: " + subtract(num1, num2));
+                case 3 -> System.out.println("Multiply: " + multiply(num1, num2));
+                case 4 -> System.out.println("Divide: " + divide(num1, num2));
+                case 5 -> exit();
+                default -> System.out.println("\033[31mWrong choice!!!\033[0m");
             }
 
 
@@ -121,6 +93,7 @@ public class SimpleCalculatorConsoleJava {
 
 //        to display calculator design
         displayCalculator();
+        System.out.println("");
 
         inputGateWay();
 

@@ -21,7 +21,6 @@ import java.util.Scanner;
 
 public class ArithmeticOperatorsCalculator {
 
-    Scanner sc;
 
     public static int addition(int num1, int num2) {
         return num1 + num2;
@@ -37,7 +36,7 @@ public class ArithmeticOperatorsCalculator {
 
     public static float divide(int num1, int num2) {
         try {
-            float res = (float) num1 / num2;
+
             return ((float) num1 / num2);
         } catch (Exception e) {
             throw new RuntimeException(e);
